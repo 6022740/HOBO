@@ -1,0 +1,39 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afleveringen</title>
+</head>
+
+<body>
+    <h1>Afleveringen</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Aflevering Titel</th>
+                <th>Duur (min)</th>
+                <th>Jaar</th>
+                <th>IMDB Rating</th>
+                <th>Serie Titel</th>
+                <th>IMDB Link</th>
+                <th>Genre</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+            <tr>
+                <td>{{ item[0] }}</td>
+                <td>{{ item[1] }}</td>
+                <td>{{ item[2] }}</td>
+                <td>{{ item[3] }}</td>
+                <td>{{ item[4] }}</td>
+                <td><a href="{{ item[5] }}">{{ item[5] }}</a></td>
+                <td>{{ item[6] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>

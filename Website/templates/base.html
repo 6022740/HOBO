@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}HoBo{% endblock %}</title>
+    <link rel="stylesheet" href="static/stylesheet.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/"><img src="../static/Media/Logo/HOBO_Beeldmerk.png" alt="HOBO_Beeldmerk"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/search"><img src="../static/Media/Nav/search_icon.png" alt="search"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/"><img src="../static/Media/Nav/home_icon.png" alt="home"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/genre"><img src="../static/Media/Nav/genre_icon.png" alt="genre"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="container">
+        {% block content %}{% endblock %}
+    </section>
+
+</body>
+
+</html>
